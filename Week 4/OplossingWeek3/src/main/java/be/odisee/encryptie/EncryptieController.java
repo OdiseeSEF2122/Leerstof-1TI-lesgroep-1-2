@@ -22,6 +22,7 @@ public class EncryptieController {
      */
     @FXML
     protected void onEncryptButtonClick() {
+        /*
         if(btnAchterstevoren.isSelected()){
             // Encrypt using first algorithm
             EncryptieAchterstevoren encryptor = new EncryptieAchterstevoren();
@@ -37,7 +38,23 @@ public class EncryptieController {
             // Alert
             Alert alert = new Alert(Alert.AlertType.NONE, "Selecteer eerst een encryptiealgoritme", ButtonType.CLOSE);
             alert.show();
+        }*/
+
+        // Na aanpassingen van overerving
+        EncryptionAlgorithm algorithm = null;
+        if(btnEigen.isSelected()){
+            algorithm = new EncryptieEigen();
+        } else if(btnAchterstevoren.isSelected()){
+            algorithm = new EncryptieAchterstevoren();
         }
+
+        if(algorithm == null){
+            Alert alert = new Alert(Alert.AlertType.NONE, "Selecteer eerst een encryptiealgoritme", ButtonType.CLOSE);
+            alert.show();
+        } else {
+            txtVersleuteld.setText(algorithm.encrypt(txtOrigineel.getText()));
+        }
+
     }
 
     /**

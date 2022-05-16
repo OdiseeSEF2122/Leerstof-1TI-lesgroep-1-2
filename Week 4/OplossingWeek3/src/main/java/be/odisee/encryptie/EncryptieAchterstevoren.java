@@ -1,6 +1,6 @@
 package be.odisee.encryptie;
 
-public class EncryptieAchterstevoren {
+public class EncryptieAchterstevoren extends EncryptionAlgorithm {
 
     public String encrypt(String input){
         String result = "";

@@ -1,12 +1,14 @@
 package be.odisee.encryptie;
 
-public class EncryptieEigen {
+public class EncryptieEigen extends EncryptionAlgorithm{
 
-    public String encrypt(String input){
+    @Override
+    public String encrypt(String input) {
         return "";
     }
 
-    public String decrypt(String input){
+    @Override
+    public String decrypt(String output) {
         return "";
     }
 }
