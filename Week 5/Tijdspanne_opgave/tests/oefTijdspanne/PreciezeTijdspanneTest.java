@@ -17,7 +17,13 @@ class PreciezeTijdspanneTest {
 
     @Test
     void bijTellen_preciezeTijdspanne2en3_Geeft5() {
-        //TODO implement
+        PreciezeTijdspanne t1 = new PreciezeTijdspanne(2, 3);
+        PreciezeTijdspanne t2 = new PreciezeTijdspanne(3, 2);
+
+        t1.bijTellen(t2);
+
+        assertEquals(5, t1.getMinuten());
+        assertEquals(5, t1.getSeconden());
     }
 
 
